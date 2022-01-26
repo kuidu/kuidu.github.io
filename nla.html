@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Numerical Linear Algebra (Fall 2021)</title>
+<!-- MathJax -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Kui Du</div>
+<div class="menu-item"><a href="kuidu.html">Home</a></div>
+<div class="menu-item"><a href=" "></a></div>
+<div class="menu-category">Teaching</div>
+<div class="menu-item"><a href="nla.html" class="current">NLA</a></div>
+<div class="menu-item"><a href="damc.html">DAMC</a></div>
+<div class="menu-item"><a href="lip.html">LIP</a></div>
+<div class="menu-item"><a href=" "></a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="publication.html">Publications</a></div>
+<div class="menu-item"><a href="group.html">Group</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Numerical Linear Algebra (Fall 2021)</h1>
+<div id="subtitle"></div>
+</div>
+<ul>
+<li><p>Prerequisites: &nbsp Mathematical Analysis, Advanced Algebra, Matlab Programming
+
+</p>
+</li>
+<li><p>Highlights: &nbsp <b>专业核心课程，深入探讨数值线性代数</b>
+
+</p>
+</li>
+</ul>
+<h2>Instructor</h2>
+<ul>
+<li><p><a href="http://121.192.180.132/group/nona/kuidu.html" target=&ldquo;blank&rdquo;>Kui Du</a>,  Email: <a href="mailto:kuidu@xmu.edu.cn" target=&ldquo;blank&rdquo;>kuidu@xmu.edu.cn</a> Tel: 0592-2580672; Office: R536 Math &amp; Phys Building, Haiyun Campus; Office Hours: Tuesday 15:00 – 17:00 by appointment</p>
+</li>
+<li><p>Teaching Assistants: Jia-Jun Fan (<a href="mailto:fjj1958365778@sina.com" target=&ldquo;blank&rdquo;>fjj1958365778@sina.com</a>), Ya-Lan Zhang (<a href="mailto:1418773176@qq.com" target=&ldquo;blank&rdquo;>1418773176@qq.com</a>), Xiao-Hui Sun (<a href="mailto:sunxh@stu.xmu.edu.cn" target=&ldquo;blank&rdquo;>sunxh@stu.xmu.edu.cn</a>).</p>
+</li>
+</ul>
+<h2>References</h2>
+<ul>
+<li><p><a href="http://people.maths.ox.ac.uk/trefethen/text.html" target=&ldquo;blank&rdquo;><b>Numerical Linear Algebra</b></a> (NLA), <a href="http://people.maths.ox.ac.uk/trefethen/" target=&ldquo;blank&rdquo;>Lloyd N. Trefethen</a> and David Bau, III, SIAM, 1997</p>
+</li>
+<li><p><a href="https://epubs.siam.org/doi/book/10.1137/1.9781611971446" target=&ldquo;blank&rdquo;><b>Applied Numerical Linear Algebra</b></a> (ANLA), <a href="https://people.eecs.berkeley.edu/~demmel/" target=&ldquo;blank&rdquo;>James Demmel</a>, SIAM, 1997</p>
+</li>
+<li><p>Matrix Analysis and Applied Linear Algebra (MAALA), Carl D. Meyer, SIAM, 2000 </p>
+</li>
+<li><p>Matrix Computations (MC), Gene H. Golub and Charles F. Van Loan, 4th Edition, Johns Hopkins University Press, 2013
+</p>
+</li>
+<li><p>Numerical Linear Algebra An Introduction (NLAI), Holger Wendland, Cambridge University Press, 2018
+</p>
+</li>
+<li><p><a href="https://doi.org/10.1016/C2011-0-07533-6" target=&ldquo;blank&rdquo;>Numerical Linear Algebra with Applications using Matlab</a>, William Ford, Elsevier, 2014</p>
+</li>
+<li><p>Iterative Krylov Methods for Large Linear Systems (IKM), Henk Van der Vorst, Cambridge University Press, 2003</p>
+</li>
+<li><p><a href="https://www-users.cs.umn.edu/~saad/IterMethBook_2ndEd.pdf" target=&ldquo;blank&rdquo;>Iterative Methods for Sparse Linear Systems</a>, <a href="https://www-users.cse.umn.edu/~saad/" target=&ldquo;blank&rdquo;>Yousef Saad</a>, 2nd Edition, SIAM, 2003 </p>
+</li>
+<li><p><a href="https://www-users.cse.umn.edu/~saad/eig_book_2ndEd.pdf" target=&ldquo;blank&rdquo;>Numerical Methods for Large Eigenvalue Problems</a>, <a href="https://www-users.cse.umn.edu/~saad/" target=&ldquo;blank&rdquo;>Yousef Saad</a>, 2nd Edition, SIAM, 2011 
+</p>
+</li>
+<li><p>Matlab Guide (MG), Desmond J. Higham and <a href="https://nhigham.com" target=&ldquo;blank&rdquo;>Nicholas J. Higham</a>,  3rd Edition, SIAM, 2017</p>
+</li>
+<li><p><a href="https://ww2.mathworks.cn/help/releases/R2020a/matlab/mathematics.html" target=&ldquo;blank&rdquo;>MathWorks MATLAB 帮助中心</a>
+
+
+</p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture.html" target=&ldquo;blank&rdquo;>Matlab m-files for lectures</a></p>
+</li>
+</ul>
+<h2>Lecture Notes (Part I) </h2>
+<ul>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture01.pdf" target=&ldquo;blank&rdquo;>Lecture 1: Inner product, Orthogonality, Vector/Matrix norm</a>.</p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture02.pdf" target=&ldquo;blank&rdquo;>Lecture 2: Singular value decomposition (SVD)</a>.</p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture03.pdf" target=&ldquo;blank&rdquo;>Lecture 3: Projector, Classical/Modified Gram-Schmidt orthogonalization, QR factorization</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture04.pdf" target=&ldquo;blank&rdquo;>Lecture 4: Householder reflector, Givens rotation, Least squares problem</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture05.pdf" target=&ldquo;blank&rdquo;>Lecture 5: LU factorization, Cholesky factorization, Gaussian elimination with pivoting</a>.  </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture06.pdf" target=&ldquo;blank&rdquo;>Lecture 6: Stationary iterative methods</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture07.pdf" target=&ldquo;blank&rdquo;>Lecture 7: Eigenvalue problem</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture08.pdf" target=&ldquo;blank&rdquo;>Lecture 8: Power/Inverse iteration, Rayleigh quotient iteration</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture09.pdf" target=&ldquo;blank&rdquo;>Lecture 9: QR algorithm</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture10.pdf" target=&ldquo;blank&rdquo;>Lecture 10: Jacobi method, Bisection method, Divide-and-conquer method</a>. </p>
+</li>
+</ul>
+<h2>Lecture Notes (Part II) </h2>
+<ul>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture11.pdf" target=&ldquo;blank&rdquo;>Lecture 11: Krylov subspace, Generalized minimal residual method</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture12.pdf" target=&ldquo;blank&rdquo;>Lecture 12: Conjugate gradients</a>. &nbsp&nbsp  <a href="http://121.192.180.132/group/nona/nla/proofth1.pdf" target=&ldquo;blank&rdquo;>(Proof of Theorem 1)</a> &nbsp&nbsp <a href="http://121.192.180.132/group/nona/nla/derivationCG.pdf" target=&ldquo;blank&rdquo;>(Derivation of CG)</a></p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture13.pdf" target=&ldquo;blank&rdquo;>Lecture 13: Biorthogonalization methods</a>.  </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture14.pdf" target=&ldquo;blank&rdquo;>Lecture 14: Krylov subspace methods for least squares problems</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture15.pdf" target=&ldquo;blank&rdquo;>Lecture 15: Krylov subspace methods for eigenvalue problems</a>.</p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture16.pdf" target=&ldquo;blank&rdquo;>Lecture 16: From Lanczos to Gauss quadrature</a>.</p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture17.pdf" target=&ldquo;blank&rdquo;>Lecture 17: FFT and structured matrices</a>.</p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture18.pdf" target=&ldquo;blank&rdquo;>Lecture 18: Multigrid</a>.</p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture19.pdf" target=&ldquo;blank&rdquo;>Lecture 19: Conditioning of a problem</a>. </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/lecture20.pdf" target=&ldquo;blank&rdquo;>Lecture 20: Backward stability of an algorithm</a>. 
+
+
+
+
+
+</p>
+</li>
+</ul>
+<h2>Assignments (tentative)</h2>
+<ul>
+<li><p>Policy: No extension will be granted. Late submission will not be accepted. No exceptions! <b>(不接受任何理由!)</b></p>
+</li>
+<li><p>Compulsory requirement for programming: Use Matlab’s <tt>publish</tt> to save all your code, comments, and results to a PDF file. You must use the programming format files:&nbsp&nbsp <a href="http://121.192.180.132/group/nona/nla/example_format.zip" target=&ldquo;blank&rdquo;>example_format.zip</a></p>
+</li>
+<li><p>=======Part I==============================</p>
+<ul>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment01.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 1. (100 points) &nbsp&nbsp 10月18日10点10分(以上课铃声为准，下同)之前交。</a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment02.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 2. (140 points) &nbsp&nbsp 10月18日10点10分之前交。</a></p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment03.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 3. (120 points) &nbsp&nbsp 10月25日10点10分之前交。</a></p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment04.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 4. (130 points) &nbsp&nbsp 10月25日10点10分之前交。</a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment05.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 5. (140 points) &nbsp&nbsp 11月15日10点10分之前交。</a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment06.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 6. (60 points)  &nbsp&nbsp 11月22日10点10分之前交。</a>  </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment07.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 7. (110 points)  &nbsp&nbsp 12月6日10点00分之前交。</a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment08.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 8. (60 points)  &nbsp&nbsp 12月13日10点10分之前交。</a>  </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment09.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 9. (50 points)  &nbsp&nbsp <b>12月20日10点10分之前交。</b></a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment10.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 10. (90 points) &nbsp&nbsp <b>12月29日\(\color{red}{18点10分}\)之前交。</b></a></p>
+</li></ul>
+</li>
+<li><p>=======Part II=============================</p>
+<ul>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment11.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 11. (80 points) &nbsp&nbsp 10月19日8点55分之前交。</a></p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment12.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 12. (90 points) &nbsp&nbsp 10月26日8点55分之前交。</a></p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment13.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 13. (50 points) &nbsp&nbsp 11月2日8点55分之前交。</a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment14.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 14. (40 points) &nbsp&nbsp 11月9日8点55分之前交。</a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment15.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 15. (40 points) &nbsp&nbsp 11月16日8点55分之前交。</a>  </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment16.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 16. (60 points) &nbsp&nbsp 11月23日8点55分之前交。</a>  </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment17.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 17. (70 points) &nbsp&nbsp 11月30日8点55分之前交。</a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment18.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 18. (50 points) &nbsp&nbsp 12月7日8点55分之前交。</a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment19.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 19. (70 points)  &nbsp&nbsp <b>12月21日8点55分之前交。</b></a> </p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/nla/assignment20.pdf" target=&ldquo;blank&rdquo;>Assignment for Lecture 20. (30 points) &nbsp&nbsp <b>12月28日8点55分之前交。</b></a></p>
+</li>
+</ul>
+
+</li>
+</ul>
+<h2>Quizzes (tentative)</h2>
+<ul>
+<li><p>Quiz I (Lectures 1&ndash;2). &nbsp&nbsp   November 8, 2021 (Monday); &nbsp&nbsp  10:00&ndash;12:00; &nbsp&nbsp  Haiyun 207</p>
+</li>
+<li><p>Quiz II (Lectures 3&ndash;4). &nbsp&nbsp  November 8, 2021 (Monday); &nbsp&nbsp  10:00&ndash;12:00; &nbsp&nbsp  Haiyun 207 </p>
+</li>
+<li><p>Quiz III (Lectures 5&ndash;7). &nbsp&nbsp  December 6, 2021 (Monday); &nbsp&nbsp  10:00&ndash;11:00; &nbsp&nbsp  Haiyun 207 
+
+</p>
+</li>
+</ul>
+<h2>Other</h2>
+<ul>
+<li><p><a href="http://121.192.180.132/group/nona/refs/mcb.pdf" target=&ldquo;blank&rdquo;>The Matrix Cookbook</a>, Kaare Brandt Petersen and Michael Syskind Pedersen</p>
+</li>
+<li><p><a href="https://arxiv.org/abs/1510.08532" target=&ldquo;blank&rdquo;>The Singular Value Decomposition, Applications and Beyond</a>, Zhihua Zhang, arXiv:1510.08532, 2015</p>
+</li>
+<li><p><a href="http://timbaumann.info/svd-image-compression-demo/" target=&ldquo;blank&rdquo;>Image Compression with Singular Value Decomposition</a>, Tim Baumann</p>
+</li>
+<li><p><a href="https://jishuin.proginn.com/u/462975" target=&ldquo;blank&rdquo;>机器学习与数学</a>, 程序员客栈(Proginn.com)</p>
+</li>
+<li><p><a href="https://epubs.siam.org/doi/abs/10.1137/18M1181985" target=&ldquo;blank&rdquo;>The Runge Example for Interpolation and Wilkinson's Examples for Rootfinding</a>, SIREV, 2020
+</p>
+</li>
+<li><p><a href="http://121.192.180.132/group/nona/refs/TopTenAlgorithms.pdf" target=&ldquo;blank&rdquo;>Top-ten algorithms from the 20th century</a> and <a href="http://121.192.180.132/group/nona/refs/TopTen.pdf" target=&ldquo;blank&rdquo;>How to develop top 21st century algorithm</a>, Alex Townsend</p>
+</li>
+<li><p><a href="http://history.siam.org/" target=&ldquo;blank&rdquo;>The History of Numerical Analysis and Scientific Computing</a>, SIAM</p>
+</li>
+<li><p><a href="http://people.maths.ox.ac.uk/trefethen/publication/PDF/2006_117.pdf" target=&ldquo;blank&rdquo;>Branches of Mathematics: Numerical analysis</a>, Lloyd N. Trefethen, Princeton U. Press, 2008.
+</p>
+</li>
+<li><p><a href="http://math.ecnu.edu.cn/~jypan/Teaching/MatrixComp/index.html" target=&ldquo;blank&rdquo;>矩阵计算/数值线性代数</a>, 华东师范大学, <a href="http://math.ecnu.edu.cn/~jypan" target=&ldquo;blank&rdquo;>潘建瑜</a></p>
+</li>
+<li><p><a href="https://people.eecs.berkeley.edu/~demmel/ma221_Fall20/" target=&ldquo;blank&rdquo;>Matrix Computations / Numerical Linear Algebra</a>, U.C. Berkeley, <a href="http://people.eecs.berkeley.edu/~demmel" target=&ldquo;blank&rdquo;>James Demmel</a></p>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</body>
+</html>
