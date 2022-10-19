@@ -1,21 +1,24 @@
-% 
-%% clgs vs mgs vs matlab qr
-clear; clc; % format compact; 
-% A = [0.7 0.70711; 0.70001 0.70711];
-% [QC,~] = clgs(A); [QM,~] = mgs(A); [QQ,~] = qr(A);
-% norm(QC'*QC-eye(2)) 
-% norm(QM'*QM-eye(2)) 
-% norm(QQ'*QQ-eye(2))
-
-m = 512; 
-n = 256;
-A = rand(m,n);
-[QC,RC] = clgs(A); 
-ClGS_error=norm(QC'*QC-eye(n)) 
-[QM,RM] = mgs(A); 
-MGS_error=norm(QM'*QM-eye(n)) 
-% [QQ,RR] = qr(A,0);
-% norm(QQ'*QQ-eye(n))
+%% Legendre polynomials
+clear; clc; 
+clear; clc;
+n = 4;
+x = sym('x'); 
+P = sym('P',[n,1]);
+P(1) = 1;
+for j = 1:n-1
+    P(j+1) = x^j;
+    for i = 1:j
+        P(j+1) = P(j+1)-int(P(j+1)*P(i),-1,1)/int(P(i)*P(i),-1,1)*P(i);
+    end
+    P(j+1) = P(j+1)/subs(P(j+1),x,1); 
+end
+P
+set(0, 'defaultaxeslinewidth',  1);
+set(0, 'defaultaxesfontsize',   16);
+figure('Position',[380 320 800 400]);
+fplot(P,[-1,1],'LineWidth',3)
+xlabel('$x$','Interpreter','latex','FontSize',28)
+axis([-1 1 -1.1 1.1])
 
 %% Discrete Legendre polynomials
 clear; clc;
@@ -29,5 +32,5 @@ A = [x.^0 x.^1 x.^2 x.^3];
 scale = Q(257,:);
 Q = Q*diag(1./scale);
 plot(x,Q,'LineWidth',3)
-%xlabel('$x$','Interpreter','latex','FontSize',28)
+xlabel('$x$','Interpreter','latex','FontSize',28)
 axis([-1 1 -1.1 1.1])
