@@ -1,5 +1,4 @@
-%% 
-% Unit circles in different norms: 1-,2-,infty-norm
+%% Unit circles for different norms: 1-,2-,infty-norm
 
 clear; clc; close all;
 set(0, 'defaultaxeslinewidth',  1);
@@ -24,7 +23,7 @@ contour(X,Y,Z,[1 1],'b-','LineWidth',2);
 
 legend('$\|\cdot\|_1$','$\|\cdot\|_2$','$\|\cdot\|_\infty$','interpreter','latex')
 
-title('Unit circles in different norms')
+title('Unit circles for different norms')
 
 %% Figure for 1-norm
 clear; clc; close all;
@@ -48,7 +47,9 @@ axis([-5,5,-5,5])
 hold on;
 X1 = linspace(-5,5,500); Y2 = linspace(-5,5,500);
 [X,Y] = meshgrid(X1,Y2); Z = abs(X)+abs(Y);
+contour(X,Y,Z,[1,1],'k-','LineWidth',2,'ShowText','on');
 contour(X,Y,Z,[2,2],'g-','LineWidth',2,'ShowText','on');
+contour(X,Y,Z,[3,3],'m-','LineWidth',2,'ShowText','on');
 contour(X,Y,Z,[4,4],'b-','LineWidth',2,'ShowText','on');
 plot(2,2,'k.','MarkerSize',20)
 
@@ -77,6 +78,7 @@ X1 = linspace(-3,3,500); Y2 = linspace(-3,3,500);
 [X,Y] = meshgrid(X1,Y2); Z = sqrt(X.^2+Y.^2);
 contour(X,Y,Z,[2.9208,2.9208],'r-','LineWidth',2,'ShowText','on');
 contour(X,Y,Z,[2*sqrt(2),2*sqrt(2)],'b-','LineWidth',2,'ShowText','on');
+contour(X,Y,Z,[2,2],'k-','LineWidth',2,'ShowText','on');
 plot(2,2,'k.','MarkerSize',20)
 
 
@@ -104,5 +106,6 @@ hold on;
 X1 = linspace(-4,4,500); Y2 = linspace(-4,4,500);
 [X,Y] = meshgrid(X1,Y2); Z = max(abs(X),abs(Y));
 contour(X,Y,Z,[1,1],'r-','LineWidth',2,'ShowText','on');
+contour(X,Y,Z,[2,2],'k-','LineWidth',2,'ShowText','on');
 contour(X,Y,Z,[3,3],'g-','LineWidth',2,'ShowText','on');
 plot(2,2,'k.','MarkerSize',20)
