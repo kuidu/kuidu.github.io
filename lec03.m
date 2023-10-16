@@ -1,7 +1,6 @@
 %% Legendre polynomials
-clear; clc; 
 clear; clc;
-n = 4;
+n = 5;
 x = sym('x'); 
 P = sym('P',[n,1]);
 P(1) = 1;
