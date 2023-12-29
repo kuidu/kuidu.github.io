@@ -47,6 +47,9 @@ function [x, y, varargout] = tricg(A, b, c, lambda, mu, varargin)
 % 
 % resvec        vectors formed by norm of residuals 
 
+% Kui Du, Jia-Jun Fan, and Fang Wang, 2023.12.25 
+
+
 if nargin == 0
     help tricg; return;
 end

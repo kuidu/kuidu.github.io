@@ -3,6 +3,8 @@ function [xall,tim] = GERKad(C,b,lambda,maxit)
 % tim: computing time, every m iterations record once
 % initial y = b and z = 0
 
+% Kui Du, 2023.2.15 
+
 [m,n] = size(C); 
 xall = zeros(n,maxit+1);
 tim = zeros(maxit+1,1);

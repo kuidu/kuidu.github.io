@@ -3,6 +3,8 @@ function [xall,tim] = RGSRSK(A,B,b,lambda,maxit)
 % tim: computing time, every m iterations record once
 % initial y and z are both zero vectors
 
+% Kui Du, 2023.2.15 
+
 [m,l] = size(A); 
 [~,n] = size(B);
 tim = zeros(maxit+1,1);

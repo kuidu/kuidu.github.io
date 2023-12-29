@@ -3,6 +3,8 @@ function [xall,tim] = RSK(B,y,lambda,maxit)
 % tim: computing time, every l iterations record once
 % initial z is zero vector
 
+% Kui Du, 2023.2.15 
+
 [l,n] = size(B);
 tim = zeros(maxit+1,1);
 xall = zeros(n,maxit+1);

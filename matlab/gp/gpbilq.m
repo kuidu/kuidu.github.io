@@ -47,6 +47,8 @@ function [xl, yl, varargout] = gpbilq(A, B, b, c, lambda, mu, varargin)
 %
 % rescvec           vectors formed by norm of residuals related to GPBICG
 
+% Kui Du, Jia-Jun Fan, and Fang Wang, 2023.12.25 
+
 if nargin == 0
     help gpbilq; return;
 end

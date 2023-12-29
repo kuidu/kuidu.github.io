@@ -44,6 +44,8 @@ function [x, y, varargout] = gpmr(A, B, b, c, lambda, mu, varargin)
 % 
 % resvec            vectors formed by norm of residuals 
 
+% Kui Du, Jia-Jun Fan, and Fang Wang, 2023.12.25 
+
 if nargin == 0
     help gpmr; return;
 end
