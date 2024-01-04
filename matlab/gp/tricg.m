@@ -46,8 +46,10 @@ function [x, y, varargout] = tricg(A, b, c, lambda, mu, varargin)
 % exitflag      covergency flag, `1` means failed, `0` means successed
 % 
 % resvec        vectors formed by norm of residuals 
-
-% Kui Du, Jia-Jun Fan, and Fang Wang, 2023.12.25 
+%
+% Date
+% --------------
+% Kui Du, Jia-Jun Fan, and Fang Wang, 2024.1.4 
 
 
 if nargin == 0
@@ -100,7 +102,6 @@ else
 end
 
 % initialization
-% x0 = zeros(size(b)); y0 = zeros(size(c));
 gx_1 = zeros(m, 1); gx0 = gx_1; 
 gy_1 = zeros(n, 1); gy0 = gy_1;
 

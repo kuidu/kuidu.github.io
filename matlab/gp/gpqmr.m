@@ -42,8 +42,11 @@ function [x, y, varargout] = gpqmr(A, B, b, c, lambda, mu, varargin)
 % exitflag          covergence flag, `1` means failed, `0` means successed
 % 
 % resvec           vectors formed by norm of residuals
+%
+% Date
+% --------------
+% Kui Du, Jia-Jun Fan, and Fang Wang, 2024.1.4 
 
-% Kui Du, Jia-Jun Fan, and Fang Wang, 2023.12.25 
 
 if nargin == 0
     help gpqmr; return;

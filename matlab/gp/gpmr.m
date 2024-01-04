@@ -43,8 +43,11 @@ function [x, y, varargout] = gpmr(A, B, b, c, lambda, mu, varargin)
 % exitflag          covergence flag, `1` means failed, `0` means successed
 % 
 % resvec            vectors formed by norm of residuals 
+%
+% Date
+% --------------
+% Kui Du, Jia-Jun Fan, and Fang Wang, 2024.1.4 
 
-% Kui Du, Jia-Jun Fan, and Fang Wang, 2023.12.25 
 
 if nargin == 0
     help gpmr; return;
@@ -173,7 +176,6 @@ for k = 1:maxit
     end
 
     h = norm(q); f = norm(p);
-    % v2 = q / h; u2 = p / f;
     
     S(2*k+1, 2*k) = h;
     S(2*k+2, 2*k-1) = f;

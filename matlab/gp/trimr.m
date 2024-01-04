@@ -46,8 +46,11 @@ function [x, y, varargout] = trimr(A, b, c, lambda, mu, varargin)
 % exitflag      covergency flag, `1` means failed, `0` means successed
 % 
 % resvec        vectors formed by norm of residuals 
+%
+% Date
+% --------------
+% Kui Du, Jia-Jun Fan, and Fang Wang, 2024.1.4 
 
-% Kui Du, Jia-Jun Fan, and Fang Wang, 2023.12.25 
 
 if nargin == 0
     help trimr; return;
@@ -248,9 +251,7 @@ for k = 1:maxit
     gy_1 = gy1; gy0 = gy2;
 
     mu_3 = mu_1; mu_2 = mu0;
-    lambda_2 = lambda0; % lambda_1 = lambda1;
-    % eta_1 = eta1; eta0 = eta2;
-    % sigma0 = sigma2;
+    lambda_2 = lambda0; 
 
     sigma0bar = sigma2bar;
     eta_1bar = eta1bar;

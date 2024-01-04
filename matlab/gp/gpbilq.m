@@ -46,8 +46,11 @@ function [xl, yl, varargout] = gpbilq(A, B, b, c, lambda, mu, varargin)
 % reslvec           vectors formed by norm of residuals related to GPBILQ
 %
 % rescvec           vectors formed by norm of residuals related to GPBICG
+%
+% Date
+% --------------
+% Kui Du, Jia-Jun Fan, and Fang Wang, 2024.1.4 
 
-% Kui Du, Jia-Jun Fan, and Fang Wang, 2023.12.25 
 
 if nargin == 0
     help gpbilq; return;
@@ -158,8 +161,6 @@ reslvec(1) = hypot(norm(b), norm(c));
 if abs(rho1bar * rho2bar - alphabar * nu2bar) > 1e-14
     [G, y] = planerot([rho1bar; alphabar]);
     rho1d = y(1); cc = G(1, 1); ss = G(1, 2);
-    % rho1d = hypot(rho1bar, alphabar);
-    % cc = rho1bar / rho1d; ss = alphabar / rho1d;
     nu2d = cc * nu2bar + ss * rho2bar;
     rho2d = -ss * nu2bar + cc * rho2bar;
 
@@ -207,8 +208,6 @@ for k = 2:maxit
     % first Givens rotation
     [G, y] = planerot([rho1bar; gamma2]);
     rho1tilde = y(1); c1 = G(1, 1); s1 = G(1, 2);
-    % rho1tilde = hypot(rho1bar, gamma2);
-    % c1 = rho1bar / rho1tilde; s1 = gamma2 / rho1tilde;
     nu2tilde = c1 * nu2bar; t1 = -s1 * nu2bar;
     omega3tilde = c1 * omega3bar + s1 * alpha;
     alphatilde = -s1 * omega3bar + c1 * alpha;
@@ -225,8 +224,6 @@ for k = 2:maxit
     % second Givens rotation
     [G, y] = planerot([rho1tilde; alphabar]);
     rho1 = y(1); c2 = G(1, 1); s2 = G(1, 2);
-    % rho1 = hypot(rho1tilde, alphabar);
-    % c2 = rho1tilde / rho1; s2 = alphabar / rho1;
     nu2 = c2 * nu2tilde + s2 * rho2bar;
     rho2hat = -s2 * nu2tilde + c2 * rho2bar;
     omega3 = c2 * omega3tilde + s2 * nu3bar;
@@ -244,8 +241,6 @@ for k = 2:maxit
     % third Givens rotation
     [G, y] = planerot([rho2hat; t1]);
     rho2v = y(1); c3 = G(1, 1); s3 = G(1, 2);
-    % rho2v = hypot(rho2hat, t1);
-    % c3 = rho2hat / rho2v; s3 = t1 / rho2v;
     nu3v = c3 * nu3hat + s3 * alphatilde;
     alphabar = -s3 * nu3hat + c3 * alphatilde;
     omega4v = c3 * omega4hat + s3 * rho4tilde;
@@ -261,8 +256,6 @@ for k = 2:maxit
     % forth Givens rotation
     [G, y] = planerot([rho2v; eta2]);
     rho2 = y(1); c4 = G(1, 1); s4 = G(1, 2);
-    % rho2 = hypot(rho2v, eta2);
-    % c4 = rho2v / rho2; s4 = eta2 / rho2;
     nu3 = c4 * nu3v + s4 * lambda;
     rho3bar = -s4 * nu3v + c4 * lambda;
     omega4 = c4 * omega4v + s4 * theta;
@@ -302,8 +295,6 @@ for k = 2:maxit
     if abs(rho3bar * rho4bar - alphabar * nu4bar) > 1e-14
         [G, y] = planerot([rho3bar; alphabar]);
         rho3d = y(1); cc = G(1, 1); ss = G(1, 2);
-        % rho3d = hypot(rho3bar, alphabar);
-        % cc = rho3bar / rho3d; ss = alphabar / rho3d;
         nu4d = cc * nu4bar + ss * rho4bar;
         rho4d = -ss * nu4bar + cc * rho4bar;
 
