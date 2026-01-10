@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Blog</title>
+<!-- MathJax -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Kui Du</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href=" "></a></div>
+<div class="menu-category">Teaching</div>
+<div class="menu-item"><a href="nla.html">NLA</a></div>
+<div class="menu-item"><a href="damc.html">DAMC</a></div>
+<div class="menu-item"><a href="lip.html">LIP</a></div>
+<div class="menu-item"><a href="blog.html" class="current">Blog</a></div>
+<div class="menu-item"><a href=" "></a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="code.html">Codes</a></div>
+<div class="menu-item"><a href="grant.html">Grants</a></div>
+<div class="menu-item"><a href="group.html">Group</a></div>
+<div class="menu-item"><a href="publication.html">Publications</a></div>
+<div class="menu-item"><a href="talk.html">Talks</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Blog</h1>
+</div>
+<h2>利用Krylov子空间证明隐式Q定理</h2>
+<p><br />
+隐式Q定理：设\(\mathbf{Q^\top AQ=H}\)和\(\mathbf{V^\top AV=G}\)均为\(n\)阶不可约上Hessenberg矩阵，且\(\mathbf{Q}\)和\(\mathbf{V}\)是正交矩阵。若\(\mathbf{Q}\)和\(\mathbf{V}\)
+的第一列相同，则存在对角矩阵\(\mathbf{D}={\rm diag}(1,\pm1,\ldots,\pm1)\)，使得\(\mathbf{V=QD}\)。</p>
+<p><br />
+证明：我们采用Krylov子空间来证明隐式Q定理。 
+设\(\mathbf{Q}\)和\(\mathbf{V}\)的第\(1\leq k\leq n\)列分别为\(\mathbf{q}_k\)和\(\mathbf{v}_k\)。考虑Krylov子空间</p>
+<p style="text-align:center">
+\[
+\mathcal{K}_k(\mathbf{A},\mathbf{q}_1)={\rm span}\{\mathbf{q}_1,\mathbf{Aq}_1,\ldots,\mathbf{A}^{k-1}\mathbf{q}_1\},\qquad 
+\mathcal{K}_k(\mathbf{A},\mathbf{v}_1)={\rm span}\{\mathbf{v}_1,\mathbf{Av}_1,\ldots,\mathbf{A}^{k-1}\mathbf{v}_1\}.
+\]
+</p><p>因为\(\mathbf{Q^\top AQ=H}\)和\(\mathbf{V^\top AV=G}\)均为不可约上Hessenberg矩阵，且\(\mathbf{Q}\)和\(\mathbf{V}\)是正交矩阵，所以我们有Arnoldi型关系式</p>
+<p style="text-align:center">
+\[
+\mathbf{AQ=QH},\qquad \mathbf{AV=VG}.
+\]
+</p><p>这意味着\(\mathbf{Q}\)和\(\mathbf{V}\)的前\(k\)列分别是上述Krylov子空间的标准正交基，即</p>
+<p style="text-align:center">
+\[
+\mathcal{K}_k(\mathbf{A},\mathbf{q}_1)={\rm span}\{\mathbf{q}_1,\mathbf{q}_2,\ldots,\mathbf{q}_k\},\qquad 
+\mathcal{K}_k(\mathbf{A},\mathbf{v}_1)={\rm span}\{\mathbf{v}_1,\mathbf{v}_2,\ldots,\mathbf{v}_k\}.
+\]
+</p><p>若\(\mathbf{q}_1=\mathbf{v}_1\)，则对于任意\(1\leq k\leq n\)，\(\mathcal{K}_k(\mathbf{A},\mathbf{q}_1)=\mathcal{K}_k(\mathbf{A},\mathbf{v}_1)\)。
+利用归纳法，易得\(\mathbf{v}_k=\pm\mathbf{q}_k\)。</p>
+<h2>对称正半定矩阵的对称正半定平方根矩阵存在且唯一</h2>
+<p><br />
+对于任何对称正半定矩阵\(\mathbf{A}\)，都存在唯一的对称正半定矩阵\(\mathbf{B}\)，使得\(\mathbf{A}=\mathbf{B}^2\)。</p>
+<p><br />
+证明：设\(\mathbf{A}\)有\(k\)个互不相同的特征值，则其特征值分解可表示为</p>
+<p style="text-align:center">
+\[
+\mathbf{A=Q^\top\Lambda Q},\quad \mathbf{Q}=[\mathbf{Q}_1\ \ \mathbf{Q}_2\ \ \cdots\ \ \mathbf{Q}_k], \quad \mathbf{\Lambda}={\rm blkdiag}(\lambda_1\mathbf{I},\lambda_2\mathbf{I},\ldots,\lambda_k\mathbf{I}),
+\]
+</p><p>其中</p>
+<p style="text-align:center">
+\[
+\mathbf{Q^\top Q=I},\quad \mathbf{Q}_i^\top \mathbf{Q}_i=\mathbf{I},\quad 1\leq i\leq k,\quad \lambda_1&gt;\lambda_2&gt;\cdots&gt;\lambda_k\geq 0.
+\]
+</p><p>我们用子空间上的正交投影的存在唯一性来证明对称正半定矩阵的对称正半定平方根矩阵存在且唯一。
+由\(\mathbf{A}=\mathbf{B}^2\)，\(\mathbf{B}\)是对称正半定的可得，对于\(1\leq i\leq k\)，\(\sqrt{\lambda_i}\)是\(\mathbf{B}\)的特征值，且</p>
+<p style="text-align:center">
+\[
+{\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})={\rm null}(\lambda_i\mathbf{I}-\mathbf{A})={\rm range}(\mathbf{Q}_i).
+\]
+</p><p>由于到\({\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})\)上的正交投影是存在唯一的，即\(\mathbf{Q}_i\mathbf{Q}_i^\top\)，所以</p>
+<p style="text-align:center">
+\[
+\mathbf{B}=\sqrt{\lambda_1}\mathbf{Q}_1\mathbf{Q}_1^\top+\sqrt{\lambda_2}\mathbf{Q}_2\mathbf{Q}_2^\top+\cdots+\sqrt{\lambda_k}\mathbf{Q}_k\mathbf{Q}_k^\top
+\]
+</p><p>是存在唯一的。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>
