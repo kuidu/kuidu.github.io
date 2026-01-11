@@ -40,12 +40,91 @@ MathJax.Hub.Config({
 <div id="toptitle">
 <h1>Blog</h1>
 </div>
+<h2>利用单位矩阵的列表示一些基本矩阵操作</h2>
+<p><br />
+利用单位矩阵的列（\(\mathbf{e}_i\)表示单位阵\(\mathbf{I}\)的第\(i\)列）可以表示常见的对矩阵的基本操作，我们举例如下：</p>
+<ul>
+<li><p>矩阵\(\mathbf{A}\)的\((i,j)\)元素，第\(i\)行，第\(j\)列分别为：</p>
+</li>
+</ul>
+<p style="text-align:center">
+\[\mathbf{e}_i^\top\mathbf{Ae}_j,\qquad \mathbf{e}_i^\top\mathbf{A},\qquad \mathbf{Ae}_j\]
+</p><ul>
+<li><p>矩阵\(\mathbf{A}\)的下三角部分（即把\(\mathbf{A}\)的对角线以上的元素都用\(0\)替换）：</p>
+</li>
+</ul>
+<p style="text-align:center">
+\[\sum_{i\geq j}\mathbf{e}_i\mathbf{e}_i^\top\mathbf{A}\mathbf{e}_j\mathbf{e}_j^\top\]
+</p><ul>
+<li><p>矩阵\(\mathbf{A}\)的第\(3,7\)行和第\(2,5,8\)列对应的元素构成的2行3列的子矩阵：</p>
+</li>
+</ul>
+<p style="text-align:center">
+\[[\mathbf{e}_3\ \mathbf{e}_7]^\top \mathbf{A}[\mathbf{e}_2\ \mathbf{e}_5\ \mathbf{e}_8]\]
+</p><ul>
+<li><p>矩阵\(\mathbf{A}\)的第\(3,7\)行和第\(2,5,8\)列对应的元素保持不变，其它位置的元素全部替换为\(0\)：</p>
+</li>
+</ul>
+<p style="text-align:center">
+\[[\mathbf{e}_3\ \mathbf{e}_7][\mathbf{e}_3\ \mathbf{e}_7]^\top \mathbf{A}[\mathbf{e}_2\ \mathbf{e}_5\ \mathbf{e}_8][\mathbf{e}_2\ \mathbf{e}_5\ \mathbf{e}_8]^\top\]
+</p><ul>
+<li><p>矩阵\(\mathbf{A}\)的第\(3\)行加到第\(1\)行之后的矩阵：</p>
+</li>
+</ul>
+<p style="text-align:center">
+\[\mathbf{A}+\mathbf{e}_1\mathbf{e}_3^\top\mathbf{A}\]
+</p><ul>
+<li><p>矩阵\(\mathbf{A}\)的第\(2\)列和第\(4\)列做交换之后的矩阵：</p>
+</li>
+</ul>
+<p style="text-align:center">
+\[\mathbf{A}-\mathbf{Ae}_2\mathbf{e}_2^\top+\mathbf{Ae}_4\mathbf{e}_2^\top-\mathbf{Ae}_4\mathbf{e}_4^\top+\mathbf{Ae}_2\mathbf{e}_4^\top\]
+</p><p>其它操作可类似得到，不一一列举。<br /><br /></p>
+<h2>对称正（半）定矩阵的对称正（半）定平方根矩阵存在且唯一</h2>
+<p><br />
+对于任何对称正（半）定矩阵\(\mathbf{A}\)，都存在唯一的对称正（半）定矩阵\(\mathbf{B}\)，使得\(\mathbf{A}=\mathbf{B}^2\)。</p>
+<p><br />
+证明：本结论有多种证明方法。这里我们用子空间上的正交投影的存在唯一性来证明。</p>
+<p>设\(\mathbf{A}\)有\(k\)个互不相同的特征值，则其特征值分解可表示为</p>
+<p style="text-align:center">
+\[
+\mathbf{A=Q\Lambda Q^\top},\quad \mathbf{Q}=[\mathbf{Q}_1\ \ \mathbf{Q}_2\ \ \cdots\ \ \mathbf{Q}_k], \quad \mathbf{\Lambda}={\rm blkdiag}(\lambda_1\mathbf{I},\lambda_2\mathbf{I},\ldots,\lambda_k\mathbf{I}),
+\]
+</p><p>其中</p>
+<p style="text-align:center">
+\[
+\mathbf{Q^\top Q=I},\quad \mathbf{Q}_i^\top \mathbf{Q}_i=\mathbf{I},\quad 1\leq i\leq k,\quad \lambda_1&gt;\lambda_2&gt;\cdots&gt;\lambda_k\geq 0.
+\]
+</p><p>由\(\mathbf{A}=\mathbf{B}^2\)，\(\mathbf{B}\)是对称正半定的可得，对于\(1\leq i\leq k\)，\(\sqrt{\lambda_i}\)是\(\mathbf{B}\)的特征值，且</p>
+<p style="text-align:center">
+\[
+{\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})={\rm null}(\lambda_i\mathbf{I}-\mathbf{A})={\rm range}(\mathbf{Q}_i).
+\]
+</p><p>由于到\({\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})\)上的正交投影是存在唯一的（参考NLA第三讲定理2），即\(\mathbf{Q}_i\mathbf{Q}_i^\top\)（参考NLA第三讲定理4），所以</p>
+<p style="text-align:center">
+\[
+\mathbf{B}=\sqrt{\lambda_1}\mathbf{Q}_1\mathbf{Q}_1^\top+\sqrt{\lambda_2}\mathbf{Q}_2\mathbf{Q}_2^\top+\cdots+\sqrt{\lambda_k}\mathbf{Q}_k\mathbf{Q}_k^\top
+\]
+</p><p>是存在唯一的。<br /><br /></p>
+<h2>利用Householder镜面反射构造带有指定列的正交矩阵</h2>
+<p><br />
+要求构造一个正交矩阵，其第一列为指定的单位长度的向量。</p>
+<p><br />
+方法：设\(\mathbf{q}=[q_1\ q_2\ \cdots \ q_n]^\top\)是一个单位长度的列向量。如果\(|q_1|\neq 0, 1\)，则矩阵</p>
+<p style="text-align:center">
+\[\left[\begin{array}{cc} q_1 &amp; \widetilde{\mathbf{q}}^\top \\ \widetilde{\mathbf{q}} &amp; \beta(\mathbf{I}-\alpha\widetilde{\mathbf{q}}\widetilde{\mathbf{q}}^\top)\end{array}\right],\quad \alpha=\frac{1}{1-|q_1|},\quad \beta=\frac{q_1}{|q_1|},\quad \widetilde{\mathbf{q}}=[q_2\ q_3\ \cdots \ q_n]^\top,\]
+</p><p>满足要求，因为它除以\(\beta\)之后是一个Householder镜面反射矩阵。</p>
+<p>如果\(|q_1|=1\)，则任取一个低一阶的正交矩阵，与\(q_1\)组成分块对角阵，即满足要求。</p>
+<p>如果\(q_1=q_2=\cdots=q_k=0\)且\(q_{k+1}\neq 0\)，则该问题退化为\(n-k\)维的情形，可按照上述方法构造\(n-k\)阶正交矩阵。
+接下来构造\(2\times2\)分块矩阵，将该\(n-k\)阶正交矩阵置于左下角，将任意\(k\)阶正交矩阵置于右上角，对角块置\(0\)矩阵，则该\(2\times2\)分块矩阵满足要求。</p>
+<p>注：我们只给出了构造方法，并未证明其满足要求。读者可根据NLA第四讲对应的内容自行证明。如果指定的列不是第一列，则可经过简单置换获得构造方法。
+<br /><br /></p>
 <h2>利用Krylov子空间证明隐式Q定理</h2>
 <p><br />
-隐式Q定理：设\(\mathbf{Q^\top AQ=H}\)和\(\mathbf{V^\top AV=G}\)均为\(n\)阶不可约上Hessenberg矩阵，且\(\mathbf{Q}\)和\(\mathbf{V}\)是正交矩阵。若\(\mathbf{Q}\)和\(\mathbf{V}\)
+<b>隐式Q定理</b>：设\(\mathbf{Q^\top AQ=H}\)和\(\mathbf{V^\top AV=G}\)均为\(n\)阶不可约上Hessenberg矩阵，且\(\mathbf{Q}\)和\(\mathbf{V}\)是正交矩阵。若\(\mathbf{Q}\)和\(\mathbf{V}\)
 的第一列相同，则存在对角矩阵\(\mathbf{D}={\rm diag}(1,\pm1,\ldots,\pm1)\)，使得\(\mathbf{V=QD}\)。</p>
 <p><br />
-证明：我们采用Krylov子空间来证明隐式Q定理。 
+证明：本定理有多种证明方法。我们采用Krylov子空间来证明隐式Q定理，以揭示它们之间的联系。 
 设\(\mathbf{Q}\)和\(\mathbf{V}\)的第\(1\leq k\leq n\)列分别为\(\mathbf{q}_k\)和\(\mathbf{v}_k\)。考虑Krylov子空间</p>
 <p style="text-align:center">
 \[
@@ -57,40 +136,14 @@ MathJax.Hub.Config({
 \[
 \mathbf{AQ=QH},\qquad \mathbf{AV=VG}.
 \]
-</p><p>这意味着\(\mathbf{Q}\)和\(\mathbf{V}\)的前\(k\)列分别是上述Krylov子空间的标准正交基，即</p>
+</p><p>这意味着\(\mathbf{Q}\)和\(\mathbf{V}\)的前\(k\)列分别是上述Krylov子空间的标准正交基（参考NLA第11讲定理4），即</p>
 <p style="text-align:center">
 \[
 \mathcal{K}_k(\mathbf{A},\mathbf{q}_1)={\rm span}\{\mathbf{q}_1,\mathbf{q}_2,\ldots,\mathbf{q}_k\},\qquad 
 \mathcal{K}_k(\mathbf{A},\mathbf{v}_1)={\rm span}\{\mathbf{v}_1,\mathbf{v}_2,\ldots,\mathbf{v}_k\}.
 \]
 </p><p>若\(\mathbf{q}_1=\mathbf{v}_1\)，则对于任意\(1\leq k\leq n\)，\(\mathcal{K}_k(\mathbf{A},\mathbf{q}_1)=\mathcal{K}_k(\mathbf{A},\mathbf{v}_1)\)。
-利用归纳法，易得\(\mathbf{v}_k=\pm\mathbf{q}_k\)。</p>
-<h2>对称正半定矩阵的对称正半定平方根矩阵存在且唯一</h2>
-<p><br />
-对于任何对称正半定矩阵\(\mathbf{A}\)，都存在唯一的对称正半定矩阵\(\mathbf{B}\)，使得\(\mathbf{A}=\mathbf{B}^2\)。</p>
-<p><br />
-证明：设\(\mathbf{A}\)有\(k\)个互不相同的特征值，则其特征值分解可表示为</p>
-<p style="text-align:center">
-\[
-\mathbf{A=Q\Lambda Q^\top},\quad \mathbf{Q}=[\mathbf{Q}_1\ \ \mathbf{Q}_2\ \ \cdots\ \ \mathbf{Q}_k], \quad \mathbf{\Lambda}={\rm blkdiag}(\lambda_1\mathbf{I},\lambda_2\mathbf{I},\ldots,\lambda_k\mathbf{I}),
-\]
-</p><p>其中</p>
-<p style="text-align:center">
-\[
-\mathbf{Q^\top Q=I},\quad \mathbf{Q}_i^\top \mathbf{Q}_i=\mathbf{I},\quad 1\leq i\leq k,\quad \lambda_1&gt;\lambda_2&gt;\cdots&gt;\lambda_k\geq 0.
-\]
-</p><p>我们用子空间上的正交投影的存在唯一性来证明对称正半定矩阵的对称正半定平方根矩阵存在且唯一。
-由\(\mathbf{A}=\mathbf{B}^2\)，\(\mathbf{B}\)是对称正半定的可得，对于\(1\leq i\leq k\)，\(\sqrt{\lambda_i}\)是\(\mathbf{B}\)的特征值，且</p>
-<p style="text-align:center">
-\[
-{\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})={\rm null}(\lambda_i\mathbf{I}-\mathbf{A})={\rm range}(\mathbf{Q}_i).
-\]
-</p><p>由于到\({\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})\)上的正交投影是存在唯一的，即\(\mathbf{Q}_i\mathbf{Q}_i^\top\)，所以</p>
-<p style="text-align:center">
-\[
-\mathbf{B}=\sqrt{\lambda_1}\mathbf{Q}_1\mathbf{Q}_1^\top+\sqrt{\lambda_2}\mathbf{Q}_2\mathbf{Q}_2^\top+\cdots+\sqrt{\lambda_k}\mathbf{Q}_k\mathbf{Q}_k^\top
-\]
-</p><p>是存在唯一的。</p>
+利用归纳法，易得\(\mathbf{v}_k=\pm\mathbf{q}_k\)。<br /><br /></p>
 </td>
 </tr>
 </table>
