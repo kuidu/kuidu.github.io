@@ -79,7 +79,7 @@ MathJax.Hub.Config({
 </ul>
 <p style="text-align:center">
 \[\mathbf{A}-\mathbf{Ae}_2\mathbf{e}_2^\top+\mathbf{Ae}_4\mathbf{e}_2^\top-\mathbf{Ae}_4\mathbf{e}_4^\top+\mathbf{Ae}_2\mathbf{e}_4^\top\]
-</p><p>其它操作可类似得到，不一一列举。<br /><br /></p>
+</p><p>其它操作可类似得到，不一一列举。(2026年1月12日发布)<br /><br /></p>
 <h2>对称正（半）定矩阵的对称正（半）定平方根矩阵存在且唯一</h2>
 <p><br />
 对于任何对称正（半）定矩阵\(\mathbf{A}\)，都存在唯一的对称正（半）定矩阵\(\mathbf{B}\)，使得\(\mathbf{A}=\mathbf{B}^2\)。</p>
@@ -100,12 +100,12 @@ MathJax.Hub.Config({
 \[
 {\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})={\rm null}(\lambda_i\mathbf{I}-\mathbf{A})={\rm range}(\mathbf{Q}_i).
 \]
-</p><p>由于到\({\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})\)上的正交投影是存在唯一的（参考NLA第三讲定理2），即\(\mathbf{Q}_i\mathbf{Q}_i^\top\)（参考NLA第三讲定理4），所以</p>
+</p><p>由于到\({\rm null}(\sqrt{\lambda_i}\mathbf{I}-\mathbf{B})\)上的正交投影是存在唯一的（参考NLA第3讲定理2），即\(\mathbf{Q}_i\mathbf{Q}_i^\top\)（参考NLA第3讲定理4），所以</p>
 <p style="text-align:center">
 \[
 \mathbf{B}=\sqrt{\lambda_1}\mathbf{Q}_1\mathbf{Q}_1^\top+\sqrt{\lambda_2}\mathbf{Q}_2\mathbf{Q}_2^\top+\cdots+\sqrt{\lambda_k}\mathbf{Q}_k\mathbf{Q}_k^\top
 \]
-</p><p>是存在唯一的。<br /><br /></p>
+</p><p>是存在唯一的。(2026年1月12日发布)<br /><br /></p>
 <h2>利用Householder镜面反射构造带有指定列的正交矩阵</h2>
 <p><br />
 要求构造一个正交矩阵，其第一列为指定的单位长度的向量。</p>
@@ -117,7 +117,7 @@ MathJax.Hub.Config({
 <p>如果\(|q_1|=1\)，则任取一个低一阶的正交矩阵，与\(q_1\)组成分块对角阵，即满足要求。</p>
 <p>如果\(q_1=q_2=\cdots=q_k=0\)且\(q_{k+1}\neq 0\)，则该问题退化为\(n-k\)维的情形，可按照上述方法构造\(n-k\)阶正交矩阵。
 接下来构造\(2\times2\)分块矩阵，将该\(n-k\)阶正交矩阵置于左下角，将任意\(k\)阶正交矩阵置于右上角，对角块置\(0\)矩阵，则该\(2\times2\)分块矩阵满足要求。</p>
-<p>注：我们只给出了构造方法，并未证明其满足要求。读者可根据NLA第四讲对应的内容自行证明。如果指定的列不是第一列，则可经过简单置换获得构造方法。
+<p>注：我们只给出了构造方法，并未证明其满足要求。读者可根据NLA第4讲对应的内容自行证明。如果指定的列不是第一列，则可经过简单置换获得构造方法。(2026年1月12日发布)
 <br /><br /></p>
 <h2>利用Krylov子空间证明隐式Q定理</h2>
 <p><br />
@@ -143,7 +143,7 @@ MathJax.Hub.Config({
 \mathcal{K}_k(\mathbf{A},\mathbf{v}_1)={\rm span}\{\mathbf{v}_1,\mathbf{v}_2,\ldots,\mathbf{v}_k\}.
 \]
 </p><p>若\(\mathbf{q}_1=\mathbf{v}_1\)，则对于任意\(1\leq k\leq n\)，\(\mathcal{K}_k(\mathbf{A},\mathbf{q}_1)=\mathcal{K}_k(\mathbf{A},\mathbf{v}_1)\)。
-利用归纳法，易得\(\mathbf{v}_k=\pm\mathbf{q}_k\)。<br /><br /></p>
+利用归纳法，易得\(\mathbf{v}_k=\pm\mathbf{q}_k\)。(2026年1月12日发布)<br /><br /></p>
 </td>
 </tr>
 </table>
